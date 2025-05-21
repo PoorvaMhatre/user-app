@@ -1,0 +1,60 @@
+.search{
+    padding: 8px 10px;
+    width: 300px;
+    background-color: #f1f1f1;
+    /* float: left; */
+}
+
+
+button  {
+    /* float: left; */
+    padding:8px 10px;
+    background: #2196f3;
+    color: white;
+    cursor: pointer;
+
+}
+
+button:hover {
+  background: #045393;
+}
+
+/* Table styling */
+table {
+  width: 60%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  /* align-items: center; */
+}
+
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+
+td a {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+td:hover {
+  background-color: #f9f9f9;
+}
+
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h2>User</h2>
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Search by first or last name.." class="search"
+    style="margin:auto;max-width:300px" />
+  <button type="submit"><i class="fa fa-search"></i></button>
+
+
+  <table>
+    <thead>
+      <tr>
+        <th (click)="sort('first_name')">First Name</th>
+        <th (click)="sort('last_name')">Last Name</th>
+        <th (click)="sort('age')">Age</th>
+        <th>Website</th>
+        <th (click)="sort('email')">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of filteredUsers | paginate: { itemsPerPage: 5, currentPage: currentPage }">
+        <td (click)="viewUser(user)" style="cursor: pointer; color: blue;"><a>{{ user.first_name }}</a></td>
+        <!-- poorva -->
+        <!-- <td (click)="viewUser(user)" style="cursor: pointer; color: blue;">
+          {{ user.first_name }}
+        </td> -->
+        <!--  -->
+
+
+
+        <td>{{ user.last_name }}</td>
+        <td>{{ user.age }}</td>
+        <td><a [href]="user.web" target="_blank">{{ user.web }}</a></td>
+        <td>{{ user.email }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+
+
+
+</body>
+
+</html>

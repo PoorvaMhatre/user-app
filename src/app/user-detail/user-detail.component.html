@@ -1,0 +1,33 @@
+<!-- <p>user-detail works!</p> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+</head>
+
+<body>
+
+
+
+    <div *ngIf="user">
+        <h2>Details: {{ user.first_name }} {{ user.last_name }} </h2>
+        <p><strong>First Name:</strong> {{ user.first_name }}</p><hr>
+        <p><strong>Last Name:</strong> {{ user.last_name }}</p><hr>
+        <p><strong>Company Name:</strong> {{user.company_name}}</p><hr>
+        <p><strong>City:</strong> {{ user.city}}</p><hr>
+        <p><strong>States</strong> {{ user.state }}</p><hr>
+        <p><strong>Zip</strong> {{ user.zip }}</p><hr>
+        <p><strong>Age:</strong> {{ user.age }}</p><hr>
+        <p><strong>Website:</strong> <a [href]="user.web" target="_blank">{{ user.web }}</a></p><hr>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <button (click)="goBack()">Back</button>
+    </div>
+
+
+</body>
+
+</html>
